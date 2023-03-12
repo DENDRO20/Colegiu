@@ -273,4 +273,8 @@ VALUES
 (60 , 'Chiștelnița' , 31),
 (61 , 'Ghiliceni' , 31),
 (62 , 'Sinești' , 32),
-(63 , 'Unțești' , 32);
+(63 , 'Unțești' , 32),
+(64 , 'Chisinau',NULL),
+(65 , 'Balti' , NULL),
+(66 , 'Tiraspol',NULL),
+(67 , 'Orhei' , NULL);
