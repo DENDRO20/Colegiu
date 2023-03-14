@@ -73,7 +73,10 @@ IdProfesor bigint FOREIGN KEY REFERENCES Profesor(IdProfesor)
 
 CREATE TABLE Note(
 IdNote int PRIMARY KEY,
-IdStudent int FOREIGN KEY REFERENCES Student(IdStudent)
+IdStudent int FOREIGN KEY REFERENCES Student(IdStudent),
+IdObjStud int FOREIGN KEY REFERENCES ObjStud(IdObjStud),
+Data date,
+Nota int
 )
 
 CREATE TABLE Orar(
