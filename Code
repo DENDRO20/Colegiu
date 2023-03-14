@@ -37,7 +37,7 @@ IdSpec int FOREIGN KEY REFERENCES Spec(IdSpec)
 
 CREATE TABLE ObjStud(
 IdObjStud int PRIMARY KEY,
-NmObjStud char(50),
+NmObjStud char(150),
 IdCatedra int FOREIGN KEY REFERENCES Catedre(IdCatedra)
 )
 
