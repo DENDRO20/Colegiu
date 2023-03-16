@@ -702,3 +702,118 @@ VALUES
 (22133247,'Șarchevici','Andreea','Alexandru','f','2004-11-29','061156802',317,45),
 (29341520,'Vulpe','Evelina','Vasile','f','2004-07-21','079041848',317,54),
 
+INSERT INTO  ObjStud
+VALUES 
+--catedra de informatica
+(8274,'Informatica', 1),
+(3492, 'Birotica', 1),
+(6018, 'Dactilografia', 1),
+(1244, 'Programarea Structurată', 1),
+(9850, 'Programarea Procedurală', 1),
+(7463, 'Programarea Calculatoarelor', 1),
+(2956, 'Programarea Orientată spre Obiecte', 1),
+(4867,'Tehnologia Informației', 1),
+(2140, 'Tehnologii de procesare a informației', 1),
+(2087, 'Procesarea Informației', 1),
+(4079, 'Tehnologii de comunicare', 1),
+(3690, 'Servicii Internet', 1),
+
+--catedra Informatica Aplicata
+(4040, 'Proiectarea şi Crearea Paginilor WEB(HTML, CSS, PHP, JavaScript)', 2),
+(4050, 'Reţele de Calculatoare', 2),
+(4060, 'Programarea Orientată spre Obiecte(JAVA)', 2),
+(4070, 'Limbajul SQL', 2),
+(4080, 'Sisteme de Gestiune a Bazelor de Date', 2),
+(4090, 'Testarea', 2),
+(4140, 'Sisteme de Operare(LINUX, WINDOWS)', 2),
+(4240, 'Securitatea Informaţională', 2),
+(4340, 'Limbajul C++', 2),
+(4440, 'Sisteme de Prelucrare Grafică(Photoshop, CorelDRAW, Ilustrator)', 2),
+(4540, 'Bazele tehnice ale calculatoarelor', 2),
+(4640, 'Modele si metode economico-matematice', 2),
+(4740, 'Birotica(Word, Excel, PowerPoint)', 2),
+(4840, 'Programarea calculatoarelor(Pascal)', 2),
+(4940, 'Informatica', 2),
+
+--catedra economie
+(5010, 'Teoria economică I, II', 3),
+(5020, 'Bazele antreprenoriatului', 3),
+(5030, 'Statistica', 3),
+(5040, 'Bazele contabilității', 3),
+(5050, 'Metode și tehnici de evaluare contabilă', 3),
+(5060, 'Finanțe', 3),
+(5070, 'Administrarea afacerilor', 3),
+(5080, 'Bazele analizei economice', 3),
+(5090, 'Fiscalitate', 3),
+(5110, 'Tehnologii informaționale în contabilitate', 3),
+(5120, 'Contabilitatea financiară I, II', 3),
+(5130, 'Contabilitatea de gestiune', 3),
+(5140, 'Contabilitatea instituțiilor publice', 3),
+(5150, 'Analiza gestionară', 3),
+(5160, 'Analiza rapoartelor financiare', 3),
+(5170, 'Contabilitatea în comerț', 3),
+(5180, 'Audit', 3),
+(5190, 'Contabilitate bancară', 3),
+(5210, 'Relații valutar-financiare internaționale', 3),
+(5220, 'Leadership-ul în organizațiile de afaceri', 3),
+(5230, 'Contabilitatea internațională', 3),
+(5240, 'Control de gestiune', 3),
+(5250, 'Practici contabile privind raportarea financiară', 3),
+(5260, 'Reglementarea prețurilor și a masei monetare', 3),
+(5270, 'Economia aplicată I, II', 3),
+(5280, 'Cultura afacerilor', 3),
+(5290, 'Riscuri în afaceri economice', 3),
+(5310, 'Firma de exercițiu I, II', 3),
+(5320, 'Bazele funcționării pieței de capital', 3),
+(5330, 'Economia ramurii', 3),
+(5340, 'Management și marketing', 3),
+(5350, 'Managementul proiectelor', 3),
+(5360, 'Managementul public', 3),
+(5370, 'Managementul resurselor umane', 3),
+
+--catedra secretariat(servicii administrative)
+(6010, 'Psihologia comunicării', 4), 
+(6020, 'Etica profesională', 4),
+(6030, 'Teoria generală a dreptului', 4),
+(6040, 'Drept constitutional', 4),
+(6050, 'Drept administrativ', 4),
+(6060, 'Elemente de drept civil', 4),
+(6070, 'Protecţia consumatorului', 4),
+(6080, 'Cadrul instituțional al UE', 4),
+(6090, 'Notariat', 4),
+(6110, 'Organele de Ocrotire a normelor de drept', 4),
+(6120, 'Etica și deontologia profesională', 4),
+(6130, 'Asistența managerială și de secretariat', 4),
+(6140, 'Administrația publică', 4),
+(6150, 'Protocol și relații cu publicul', 4),
+(6160, 'Drept financiar și fiscal', 4),
+(6170, 'Corespondența administrativă', 4),
+(6180, 'Dreptul muncii și protecției sociale', 4),
+(6190, 'Dreptul familiei și acte de stare civilă', 4),
+(6210, 'Dreptul afacerilor', 4),
+(6220, 'Deontologia funcționarului public', 4),
+(6230, 'Bazele legislației', 4),
+
+--catedra limbi straine
+(7070, 'Limba engleză', 5),
+(7080, 'Limba franceză', 5),
+
+--catedra de matematica
+(8080, 'Matematica', 6),
+
+--catedra Stiinte socioumanistice
+(1010, 'Istoria', 7),
+(1020, 'Geografia', 7),
+(1030, 'Educația civică', 7),
+(1040, 'Psihologia', 7),
+(1050, 'Filozofia', 7),
+
+--catedra Limba si literatura română
+(2020,  'Limba și lietaratura română', 8),
+(2030, 'Limba și lietaratura rusă', 8),
+
+--catedra 'Biologie, chimie si fizică'
+(3030, 'Biologia', 9),
+(3040, 'Chimia', 9),
+(3050, 'Fizica', 9);
+
