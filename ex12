@@ -1,6 +1,0 @@
---Să se afişeze lista disciplinilor studiate de grupa P-2123.
-SELECT NmObjStud
-FROM ObjStud o JOIN ObjStGr g ON o.IdObjStud = g.IdObjStud
-WHERE g.IdObjStud IN(SELECT IdObjStud
-					FROM ObjStGr
-					WHERE IdGrupa = 231)
