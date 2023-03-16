@@ -1,0 +1,24 @@
+
+-- Laurentiu (Lista localităţilor şi numele raionului, respectiv.)
+CREATE VIEW afisareloc_nmr AS
+SELECT NmLocalitate , Raion.NmRaion
+FROM Localitate
+INNER JOIN Raion ON Localitate.IdLocalitate = Raion.IdRaion;
+
+
+-- Laurentiu(Să se determine câte grupe sunt la fiecare specialitate.)
+CREATE VIEW afisaregrupe AS
+SELECT S.NmSpec, COUNT(*) AS TotalGrupa
+FROM Spec AS S
+INNER JOIN Grupa AS G ON S.IdSpec = G.IdSpec
+GROUP BY S.NmSpec
+HAVING COUNT(*) > 1;
+
+--Laurentiu Să se afişeze lista disciplinilor studiate de grupa P-2123.
+CREATE VIEW afisaredis_stud AS
+SELECT NmObjStud
+FROM ObjStud o JOIN ObjStGr g ON o.IdObjStud = g.IdObjStud
+WHERE g.IdObjStud IN(SELECT IdObjStud
+FROM ObjStGr
+WHERE IdGrupa = 231);
+
