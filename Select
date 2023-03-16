@@ -22,3 +22,27 @@ WHERE g.IdObjStud IN(SELECT IdObjStud
 FROM ObjStGr
 WHERE IdGrupa = 231);
 
+--ANTON Afișați lista grupelor, în care sunt elevi, ce studiază pe note negative.
+SELECT Grupa.IdGrupa, Grupa.NmGrupa 
+FROM Grupa 
+INNER JOIN Student ON Grupa.IdGrupa = Student.IdGrupa 
+INNER JOIN Note ON Student.IdStudent = Note.IdStudent 
+WHERE Note.Nota < 5
+
+--ANTON Lista grupelor, numele specialităţii,lista obiectelor şi  numelui profesorului care preda obiectul.
+SELECT DISTINCT Grupa.NmGrupa, Spec.NmSpec, ObjStud.NmObjStud, Profesor.NmProfesor 
+FROM Grupa 
+INNER JOIN Spec ON Grupa.IdSpec = Spec.IdSpec 
+INNER JOIN ObjStGr ON Grupa.IdGrupa = ObjStGr.IdGrupa 
+INNER JOIN ObjStud ON ObjStGr.IdObjStud = ObjStud.IdObjStud 
+INNER JOIN Profesor ON ObjStGr.IdProfesor = Profesor.IdProfesor 
+WHERE ObjStud.NmObjStud = 'Matematica'
+
+--ANTON Să se determine câţi studenţi învaţă din fiecare localitate.
+--CREATE VIEW V_fiecareLocal
+--AS
+SELECT Localitate.NmLocalitate, COUNT(*) AS NrStudenti
+FROM Localitate 
+INNER JOIN Student ON Localitate.IdLocalitate = Student.IdLocalitate 
+GROUP BY Localitate.NmLocalitate
+
