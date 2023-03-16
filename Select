@@ -46,3 +46,23 @@ FROM Localitate
 INNER JOIN Student ON Localitate.IdLocalitate = Student.IdLocalitate 
 GROUP BY Localitate.NmLocalitate
 
+--Eugeniu Să se afișeze nr. de profesori de la fiecare catedra.
+SELECT NmCatedre, COUNT(IdProfesor) NrProfesori
+FROM Catedre c JOIN Profesor p ON c.IdCatedra = p.IdCatedra
+GROUP BY c.NmCatedre
+
+
+--Eugeniu Să se determine câte localităţi sunt în fiecare raion. 
+SELECT NmRaion, COUNT(IdLocalitate) NrLocalitati
+FROM Raion r JOIN Localitate l ON r.IdRaion = l.IdRaion
+GROUP BY r.NmRaion
+
+--Eugeniu Să se afişeze lista localităţilor din care îşi fac studiile elevii grupei P-2122.
+CREATE VIEW v1
+AS
+SELECT NmLocalitate
+FROM Localitate
+WHERE IdLocalitate IN(SELECT IdLocalitate 
+						FROM Student
+						WHERE IdGrupa = 221)
+
