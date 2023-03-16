@@ -63,6 +63,29 @@ AS
 SELECT NmLocalitate
 FROM Localitate
 WHERE IdLocalitate IN(SELECT IdLocalitate 
-						FROM Student
-						WHERE IdGrupa = 221)
+FROM Student
+WHERE IdGrupa = 221)
+Cebotaru Dan
+--Afișați numele și prenumele studenților care au note de 8 și au o familie(alegeti) anumita.
+--CREATE VIEW V_1 
+--AS
+SELECT NmStudent,PrenStudent
+FROM Student JOIN Note ON Student.IDStudent = Note.IDStudent
+WHERE Note.Nota = 8 AND NmStudent = 'Cebotaru';
 
+
+--Să se determine câte grupe de studii sunt pentru fiecare an de admitere.
+SELECT AnAdm, COUNT(DISTINCT NmGrupa) AS NrGrupe
+FROM Grupa
+GROUP BY AnAdm;
+
+
+
+--Să se determine câte grupe studiază disciplinele predate în colegiu de un profesor anumit.
+SELECT Profesor.NmProfesor, ObjStud.NmObjStud, COUNT(DISTINCT Grupa.IdGrupa) AS NrGrupe
+FROM Profesor 
+INNER JOIN Grupa ON Profesor.IdProfesor = Grupa.IdProfesor 
+INNER JOIN ObjStGr ON Grupa.IdGrupa = ObjStGr.IdGrupa 
+INNER JOIN ObjStud ON ObjStGr.IdObjStud = ObjStud.IdObjStud AND ObjStud.NmObjStud LIKE 'Programarea Orientată spre Obiecte(JAVA)' 
+WHERE Profesor.NmProfesor = 'Frunză Olga'
+GROUP BY Profesor.NmProfesor, ObjStud.NmObjStud
