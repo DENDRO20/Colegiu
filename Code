@@ -86,3 +86,6 @@ IdObjStud int FOREIGN KEY REFERENCES ObjStud(IdObjStud),
 IdProfesor bigint FOREIGN KEY REFERENCES Profesor(IdProfesor),
 NrPereche int
 )
+
+INSERT INTO Spec VALUES(123 , 'specialitate c' , 'uman');
+SELECT * from Spec;
